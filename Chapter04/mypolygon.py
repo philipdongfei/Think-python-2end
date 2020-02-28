@@ -17,9 +17,16 @@ def polygon(t, length, n):
 
 def circle(t, r):
     c = 2.0 * math.pi * r
-    for n in range (6, 20, 2):
-        len = c / float(n)
+    n = int(c / 3) + 1
+    len = c / n
+    polygon(t, len, n)
+    '''
+
+    for n in range (44, 50, 2):
+        len = c / n
         polygon(t, len, n)
+    '''
+
 def arc(t, r, angle):
     arc_c = angle / 180.0 * math.pi * r
     c = 2.0 * math.pi * r
@@ -43,11 +50,14 @@ def arc(t, r, angle):
             t.lt(degrees)
 
 bob = turtle.Turtle()
+'''
+
 bob.rt(90)
 bob.fd(100)
 bob.lt(90)
 arc(bob, 100, 220)
-#circle(bob, 100)
+'''
+circle(bob, 100)
 #square(bob, 50)
 #polygon(bob, 30, 6)
 turtle.mainloop()
