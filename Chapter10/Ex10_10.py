@@ -28,11 +28,16 @@ def in_bisect_cheat(word_list, word):
     return word_list[i] == word
 def main():
     word_list = make_word_list()
+    word = 'apple'
+    print(word, 'in list', in_bisect(word_list, word))
+    '''
+
     for word in ['aa', 'alien', 'allen', 'zymurgy']:
         print(word, 'in list', in_bisect(word_list, word))
 
     for word in ['aa', 'alien', 'allen', 'zymurgy']:
         print(word, 'in list', in_bisect_cheat(word_list, word))
+    '''
 
 if __name__ == '__main__':
     main()
