@@ -11,7 +11,7 @@ def rank_freq(hist):
     freqs.sort(reverse=True)
 
     # enumerate the ranks and frequencies
-    rf = [(r+1), f) for r, f in enumerate(freqs)]
+    rf = [(r+1, f) for r, f in enumerate(freqs)]
     return rf
 
 def print_ranks(hist):
@@ -37,8 +37,9 @@ def plot_ranks(hist, scale='log'):
     plt.plot(rs, fs, 'r-', linewidth=3)
     plt.show()
 
-def main(script, filename='emma.txt', flag='plot'):
-    hist = process_file(filename, skip_header=True)
+def main(script, filename='158-0.txt', flag='plot'):
+    #hist = process_file(filename, skip_header=True)
+    hist = process_file(filename)
 
     # either print the results or plot them
     if flag == 'print':

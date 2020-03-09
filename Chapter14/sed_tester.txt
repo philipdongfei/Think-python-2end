@@ -1,0 +1,1 @@
+pattern is replaced by string. it is pattern.
