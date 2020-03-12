@@ -38,6 +38,8 @@ class Deck:
         for card in self.cards:
             res.append(str(card))
         return '\n'.join(res)
+    def sort(self):
+        self.cards.sort()
     def pop_card(self):
         return self.cards.pop()
     def add_card(self, card):

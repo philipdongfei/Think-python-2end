@@ -1,5 +1,4 @@
-from Card import Card
-from Hand import Hand
+from Card import Card, Deck
 import random
 
 class Deck:
@@ -14,6 +13,10 @@ class Deck:
         for card in self.cards:
             res.append(str(card))
         return '\n'.join(res)
+    def __cmp__(self):
+        cards.sort()
+    def sort(self):
+        self.__cmp__()
     def pop_card(self):
         return self.cards.pop()
     def add_card(self, card):
